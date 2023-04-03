@@ -1,0 +1,114 @@
+
+
+.main-preview {
+    margin-top: 3.3rem;
+
+    .main-preview__titleContainer {
+        display: flex;
+        flex-direction: column;
+        // width: 61.6%;
+        // margin: 0 auto;
+        gap: 1rem;
+
+        .main-preview__upperContainer {
+            width: 61.6%;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-family: 'Merriweather';
+            font-style: italic;
+            font-weight: 400;
+            font-size: 12rem;
+            line-height: 100%;
+            letter-spacing: 0.03em;
+            color: #090909;
+        }
+
+        span {
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 2rem;
+            color: #B2282D;
+        }
+
+
+        .main-preview__titleImgContainer {
+            display: flex;
+            gap: 0.4rem;
+            
+
+            .main-preview__textImgContainer {
+                display: flex;
+                flex-direction: column;
+                gap: 0.9rem;
+
+                .main-preview__imgContainer {
+                    width: 50%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+
+        .main-preview__textContainer {
+            display: flex;
+            align-items: flex-end;
+            gap: 16rem;
+
+            h2 {
+                font-style: normal;
+            }
+
+            span {
+                margin-bottom: 2.2rem;
+                padding-left: 5rem;
+            }
+        }
+
+        .main-preview__textBtnContainer {
+            display: flex;
+            gap: 6rem;
+            align-items: flex-end;
+            padding-left: 6rem;
+
+
+            button {
+                font-weight: 400;
+                font-size: 2rem;
+                line-height: 130%;
+                color: #B2282D;
+                padding: 1.2rem 3.2rem;
+                
+                display: flex;
+                align-items: center;
+                gap: 1.2rem;
+                background: none;
+                border: 0.1rem solid #B2282D;
+                // backdrop-filter: blur(21rem);
+                border-radius: 3rem;
+                margin-bottom: 3.1rem;
+
+                svg {
+                    width: 4rem;
+                    height: 1rem;
+                }
+
+            }
+        }
+
+        .main-preview__img {
+
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

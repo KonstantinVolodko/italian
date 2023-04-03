@@ -1,0 +1,84 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+
+    .header-logoList {
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+
+        ul {
+            display: flex;
+            gap: 5rem;
+
+            li {
+
+                a {
+                    font-weight: 500;
+                    font-size: 2rem;
+                    line-height: 2.5rem;
+                    color: #090909;
+                    text-decoration: none;
+                }
+
+                
+            }
+        }
+
+        svg {
+            width: 12.3rem;
+            height: 13.4rem;
+        }
+    }
+
+    .header-contactsList {
+        display: flex;
+        align-items: center;
+        gap: 2.4rem;
+
+        button {
+            background: #B2282D;
+            backdrop-filter: blur(21rem);
+            border-radius: 3rem;
+            font-weight: 400;
+            font-size: 2rem;
+            line-height: 130%;
+            color: #FFFFFF;
+            padding: 1.2rem 3.2rem;
+            border: none;
+        }
+
+        .header-phoneLink {
+            font-weight: 400;
+            font-size: 2rem;
+            line-height: 130%;
+            color: #090909;
+            text-decoration: none;
+        }
+
+        .header-languageContainer {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+
+            svg {
+                width: 2.4rem;
+                height: 2.4rem;
+                fill: #FFFFFF;
+                stroke: #090909;
+            }
+
+            a {
+                font-weight: 400;
+                font-size: 2rem;
+                line-height: 130%;
+                color: #090909;
+                opacity: 0.5;
+                text-decoration: none;
+            }
+        }
+    }
+
+
+}
