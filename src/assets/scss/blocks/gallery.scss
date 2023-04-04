@@ -1,0 +1,72 @@
+.gallery-text {
+  max-width: 77.8rem;
+  margin: 0 auto;
+  text-align: center;
+  @include breakpoint($xl-bp) {
+    font-size: 1.8rem;
+  }
+}
+
+.text-20 {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 130%;
+  /* or 26px */  
+  /* 2 */
+  
+  color: #090909;
+}
+
+.gallery-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 31.8rem);
+  gap: 3rem;
+  @include breakpoint($sm-bp) {
+    gap: 1rem;
+    grid-template-rows: repeat(6, auto);
+  }
+  li {
+    &:nth-child(9n + 1) {
+      grid-row: 2 span;
+      grid-column: 2 span;
+      @include breakpoint($sm-bp) {
+        grid-row: 1 span;
+        grid-column: 1 span;
+      }
+    }
+    &:nth-child(9n + 4), &:nth-child(9n + 5), &:nth-child(9n + 6) {
+      grid-row: 2 span;
+      @include breakpoint($sm-bp) {
+        grid-row: 1 span;
+      }
+    }
+    &:nth-child(9n + 8) {
+      grid-row: 2 span;
+      grid-column: 2 span;
+      @include breakpoint($xl-bp) {
+        grid-row: 1 span;
+        grid-column: 1 span;
+      }
+    }
+    &:nth-child(9n + 9) {
+      @include breakpoint($xl-bp) {
+        grid-row: 2 span;
+        grid-column: 2 span;
+      }
+      @include breakpoint($sm-bp) {
+        grid-row: 1 span;
+        grid-column: 1 span;
+      }
+    }
+  }
+  @include breakpoint($xl-bp) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include breakpoint($sm-bp) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+}

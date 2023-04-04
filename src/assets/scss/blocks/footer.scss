@@ -26,6 +26,9 @@
         .footer-socialMediaContainer {
             display: flex;
             gap: 3rem;
+            svg {
+                fill: "#090909";
+            }
 
             .footer-facebook {
 

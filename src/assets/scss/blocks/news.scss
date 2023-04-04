@@ -1,0 +1,154 @@
+.img-cover {
+  overflow: hidden;
+  display: block;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  @include breakpoint($xl-bp) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include breakpoint($sm-bp) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+}
+
+.news-item {
+  a {
+    text-decoration: none;
+    display: block;
+  }
+}
+
+.news-img {
+  height: 24rem;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.news-title {
+  margin-top: 1.5rem;
+  display: block;
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 130%;
+  /* or 31px */
+  
+  letter-spacing: 0.03em;
+  
+  /* 3 */
+  
+  color: #090909;
+}
+
+.news-data {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  /* identical to box height */
+  
+  
+  /* 3 */
+  
+  color: #090909;
+  opacity: 0.7;
+  display: block;
+  margin-top: 0.8rem;
+}
+
+.news-desc {
+  margin-top: 0.8rem;
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  
+  /* 3 */
+  
+  color: #090909;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+.page-button {
+  background: #B2282D;
+  backdrop-filter: blur(21rem);
+  border-radius: 3rem;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 130%;
+  color: #FFFFFF;
+  padding: 1.2rem 3.2rem;
+  border: none;
+  @include breakpoint($sm-bp) {
+    width: 100%;
+  }
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.newsItem-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  @include breakpoint($sm-bp) {
+    gap: 2rem;
+  }
+  li {
+    &:nth-child(2n + 2) {
+      & > *:nth-child(2) {
+        order: -1;
+      }
+    }
+  }
+}
+.newsItem-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  @include breakpoint($sm-bp) {
+    gap: 2rem;
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+.newsItem-img {
+  height: 48.9rem;
+  @include breakpoint($sm-bp) {
+    height: 30rem;
+  }
+}
+.newsItem-text {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 130%;
+  /* or 26px */
+  
+  
+  /* 2 */
+  
+  color: #090909;
+  @include breakpoint($sm-bp) {
+    font-size: 1.8rem;
+  }
+  
+}
