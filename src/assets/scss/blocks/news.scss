@@ -94,7 +94,12 @@
   line-height: 130%;
   color: #FFFFFF;
   padding: 1.2rem 3.2rem;
-  border: none;
+  border: 0.1rem solid #B2282D;
+  transition: all .3s;
+  &:hover {
+    background-color: transparent;
+    color: #B2282D;
+  }
   @include breakpoint($sm-bp) {
     width: 100%;
   }

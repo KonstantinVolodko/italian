@@ -114,6 +114,11 @@
     margin-top: 2rem;
   }
 }
+.mob-mt-15 {
+  @include breakpoint($xl-bp) {
+    margin-top: 1.5rem;
+  }
+}
 
 .map {
   height: 66.6rem;
