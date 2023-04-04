@@ -64,9 +64,21 @@ svg {
   padding-right: 10rem
 }
 
-.header-activeLink {
+.activeLink {
   color: #B2282D !important;
   opacity: 1 !important;
+}
+
+.activeMenuBtn {
+  background: #B2282D !important;
+}
+
+.activeCutCornerFirst {
+  border-radius: 2.4rem 2.4rem 0rem 2.4rem !important;
+}
+
+.activeCutCornerLast {
+  border-radius: 2.4rem 2.4rem 2.4rem 0rem !important;
 }
 
 
