@@ -7,9 +7,9 @@ html {
   box-sizing: border-box;
   font-size: calc(100vw / 1920 * 10);
 
-  @include breakpoint($ssh-bp) {
-    font-size: calc(100vw / 1600 * 10);
-  }
+  // @include breakpoint($ssh-bp) {
+  //   font-size: calc(100vw / 1600 * 10);
+  // }
 
   @include breakpoint($cos-bp) {
     font-size: calc(100vw / 1330 * 10);
@@ -19,13 +19,13 @@ html {
     font-size: calc(100vw / 1024 * 10);
   }
 
-  @include breakpoint($jb-bp) {
-    font-size: calc(100vw / 850 * 10);
-  }
+  // @include breakpoint($jb-bp) {
+  //   font-size: calc(100vw / 850 * 10);
+  // }
 
-  @include breakpoint($lb-bp) {
-    font-size: calc(100vw / 650 * 10);
-  }
+  // @include breakpoint($lb-bp) {
+  //   font-size: calc(100vw / 650 * 10);
+  // }
 
 
   @include breakpoint($sm-bp) {
@@ -62,7 +62,7 @@ svg {
 .paddingContainer {
   padding-left: 10rem;
   padding-right: 10rem;
-  @include breakpoint($xl-bp) {
+  @include breakpoint($cos-bp) {
     padding-left: 5rem;
     padding-right: 5rem;
   }
