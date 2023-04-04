@@ -1,0 +1,101 @@
+.aboutus-img {
+  height: 66.5rem;
+  @include breakpoint($sm-bp) {
+    height: 30rem;
+  }
+}
+
+.aboutus-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  @include breakpoint($xl-bp) {
+    gap: 5rem;
+  }
+}
+
+.aboutus-text {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.6rem;
+  line-height: 130%;
+  /* or 47px */
+  
+  
+  /* 2 */
+  
+  color: #090909;
+  @include breakpoint($xl-bp) {
+    font-size: 2.8rem;
+  }
+}
+
+.aboutus-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  @include breakpoint($xl-bp) {
+    gap: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.about-us-divide-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  @include breakpoint($xl-bp) {
+    gap: 2rem;
+  }
+}
+.about-us-divide-item {
+  padding-top: 2rem;
+  border-top: 0.1rem solid rgba($color: #B2282D, $alpha: 0.5);
+  @include breakpoint($xl-bp) {
+    padding-top: 1.5rem;
+  }
+}
+.about-us-divide-title {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 130%;
+  /* or 31px */
+  
+  letter-spacing: 0.03em;
+  
+  /* 3 */
+  
+  color: #090909;
+}
+.about-us-divide-text {
+/* Text/3 */
+
+font-family: 'Mulish';
+font-style: normal;
+font-weight: 500;
+font-size: 1.6rem;
+line-height: 2rem;
+
+/* 3 */
+
+color: #090909;
+margin-top: 1.5rem;
+@include breakpoint($xl-bp) {
+  margin-top: 1rem;
+}
+}
+
+.aboutus-item-img {
+  height: 46.2rem;
+  width: 100%;
+  @include breakpoint($sm-bp) {
+    height: 30rem;
+  }
+}
+
+.align-self-center {
+  align-self: center;
+}
