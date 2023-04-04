@@ -48,6 +48,9 @@
   @include breakpoint($xl-bp) {
     gap: 2rem;
   }
+  @include breakpoint($sm-bp) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .about-us-divide-item {
   padding-top: 2rem;
@@ -98,4 +101,68 @@ margin-top: 1.5rem;
 
 .align-self-center {
   align-self: center;
+}
+
+.bg-red {
+  background-color: #B2282D;
+}
+.p-100 {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  @include breakpoint($xl-bp) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  @include breakpoint($sm-bp) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+.mt-160 {
+  margin-top: 16rem;
+  @include breakpoint($cos-bp) {
+    margin-top: 12rem;
+  }
+  @include breakpoint($xl-bp) {
+    margin-top: 8rem;
+  }
+}
+
+.grid-cols-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5.6rem;
+  @include breakpoint($xl-bp) {
+    grid-template-columns: repeat(1,1fr);
+    gap: 2rem;
+  }
+}
+
+.h-760 {
+  height: 76rem;
+  @include breakpoint($sm-bp) {
+    height: 26rem;
+  }
+}
+
+.aboutus-white-title {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 6rem;
+  line-height: 120%;
+  /* identical to box height, or 72px */
+  
+  letter-spacing: 0.03em;
+  
+  /* 2 */
+  
+  color: #FFFFFF;
+  @include breakpoint($xl-bp) {
+    font-size: 3.6rem;
+  }
+}
+
+.text-white {
+  color: #FFFFFF;
 }
