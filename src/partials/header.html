@@ -17,15 +17,20 @@
     </div>
 
     <div class="header-contactsList">
-        <a class="header-phoneLink" href="tel:+7(925)678-21-28">+7 (925) 678-21-28</a>
+        <a class="header-phoneLink" href="tel:+7(925)678-21-28">
+            <span>+7 (925) 678-21-28</span>
+            <svg>
+                <use href="#phoneIco"></use>
+            </svg>
+        </a>
         <button>
             Забронировать
         </button>
 
         <div class="header-languageContainer">
-            <svg>
-                <use href="#globe"></use>
-            </svg>
+                <svg>
+                    <use href="#globe"></use>
+                </svg>
 
             <ul>
                 <li>
@@ -46,6 +51,33 @@
                     </a>
                 </li>
             </ul>
+        </div>
+
+        <div class="header-burgerBtn">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div class="header-modal">
+        <button class="header-modal__crossBtn">
+            <svg>
+                <use href="#crossIco"></use>
+            </svg>
+        </button>
+        <ul>
+            <li><a href="#" class="activeLink">Главная</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Меню</a></li>
+            <li><a href="#">Галерея</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+
+        <div class="header-modal__phoneContainer">
+            <a href="tel:+7(925)678-21-28">+7 (925) 678-21-28</a>
+            <button>Забронировать</button>
         </div>
     </div>
 </div>
