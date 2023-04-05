@@ -89,6 +89,17 @@ svg {
   border-radius: 2.4rem 2.4rem 2.4rem 0rem !important;
 }
 
+.stopScroll {
+  overflow: hidden;
+}
+
+.increaceHeight {
+  // max-height: 'max-content' !important;
+  max-height: 10rem !important;
+  transition: all 0.2s linear !important;
+}
+
+
 
 
 @import './blocks/header.scss';

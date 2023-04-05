@@ -29,6 +29,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     mainMenuBtns[0].click()
 
+    let dropdownBtn = document.querySelector('.header-languageContainer svg')
+    let dropdownContent = document.querySelector('.header-languageContainer ul')
+
+    dropdownBtn.addEventListener('click', e => {
+        
+        dropdownContent.classList.toggle('increaceHeight')
+    })
+
+    let headerModal = document.querySelector('.header-modal')
+    let burgerBtn = document.querySelector('.header-burgerBtn')
+    let crossBtn = document.querySelector('.header-modal__crossBtn')
+
+
+    burgerBtn.addEventListener('click', e => {
+        headerModal.classList.add('header-modal__show')
+        document.body.classList.add('stopScroll')
+    })
+
+    crossBtn.addEventListener('click', e => {
+        headerModal.classList.remove('header-modal__show')
+        document.body.classList.remove('stopScroll')
+    })
+
 })
 
 

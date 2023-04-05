@@ -13,6 +13,14 @@
         .main-preview__upperContainer {
             width: 61.6%;
             margin: 0 auto;
+
+            @include breakpoint($cos-bp) {
+                width: 85%;
+            }
+
+            @include breakpoint($xl-bp) {
+                width: 100%;
+            }
         }
 
         h2 {
@@ -23,6 +31,13 @@
             line-height: 100%;
             letter-spacing: 0.03em;
             color: #090909;
+
+            @include breakpoint($sm-bp) {
+                font-size: 4.2rem;
+                line-height: 130%;
+                letter-spacing: 0.03em;
+            }
+
         }
 
         span {
@@ -30,12 +45,21 @@
             font-size: 1.6rem;
             line-height: 2rem;
             color: #B2282D;
+
+            @include breakpoint($sm-bp) {
+                font-size: 1.4rem;
+                line-height: 1.8rem;
+            }
         }
 
 
         .main-preview__titleImgContainer {
             display: flex;
             gap: 0.4rem;
+
+            @include breakpoint($sm-bp) {
+                flex-direction: column-reverse;
+            }
             
 
             .main-preview__textImgContainer {
@@ -43,8 +67,18 @@
                 flex-direction: column;
                 gap: 0.9rem;
 
+                @include breakpoint($sm-bp) {
+                    flex-direction: row-reverse;
+                    justify-content: space-between;
+                    align-items: end;
+                }
+
                 .main-preview__imgContainer {
                     width: 50%;
+
+                    @include breakpoint($sm-bp) {
+                        width: 20%;
+                    }
 
                     img {
                         width: 100%;
@@ -60,6 +94,11 @@
             align-items: flex-end;
             gap: 16rem;
 
+            @include breakpoint($sm-bp) {
+                flex-direction: column-reverse;
+                gap: 0rem;
+            }
+
             h2 {
                 font-style: normal;
             }
@@ -67,6 +106,10 @@
             span {
                 margin-bottom: 2.2rem;
                 padding-left: 5rem;
+
+                @include breakpoint($sm-bp) {
+                    display: none;
+                }
             }
         }
 
@@ -76,7 +119,21 @@
             align-items: flex-end;
             padding-left: 6rem;
 
+            .main-preview__hiddenText {
+                display: none;
+                margin-left: auto;
+                margin-bottom: 2rem;
+                @include breakpoint($sm-bp) {
+                    display: block;
+                }
+            }
 
+            @include breakpoint($sm-bp) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0rem;
+                padding-left: 0rem;
+            }
             
         }
 
@@ -108,6 +165,13 @@
     border-radius: 3rem;
     margin-bottom: 3.1rem;
 
+    @include breakpoint($sm-bp) {
+        font-size: 1.8rem;
+        line-height: 130%;
+        width: 100%;
+        justify-content: space-between;
+    }
+
     svg {
         width: 4rem;
         height: 1rem;
@@ -127,6 +191,11 @@
         font-size: 2rem;
         line-height: 2.5rem;
         color: #B2282D;
+
+        @include breakpoint($sm-bp) {
+            font-size: 1.6rem;
+            line-height: 2rem;
+        }
     }
 
     h2 {
@@ -141,6 +210,11 @@
         flex-direction: column;
         align-items: center;
 
+        @include breakpoint($sm-bp) {
+            font-size: 4.2rem;
+            line-height: 120%;
+        }
+
         span {
             font-style: italic;
         }
@@ -150,10 +224,45 @@
 .main-aboutUs {
     margin-top: 16rem;
 
+    @include breakpoint($sm-bp) {
+        margin-top: 8rem;
+    }
+
     .main-aboutUs__contentContainer {
         display: flex;
         margin-top: 5rem;
         gap: 3rem;
+
+        @include breakpoint($sm-bp) {
+            margin-top: 3rem;
+        }
+
+        @include breakpoint($xl-bp) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-aboutUs__imgContainer {
+            width: 64%;
+
+            @include breakpoint($cos-bp) {
+                width: 100%;
+            }
+
+            @include breakpoint($xl-bp) {
+                width: 40%;
+            }
+
+            @include breakpoint($sm-bp) {
+                width: 100%;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
 
         .main-aboutUs__helperContainer {
             display: flex;
@@ -163,6 +272,10 @@
 
             .main-aboutUs__imgContainer {
                 width: 63.4%;
+
+                @include breakpoint($sm-bp) {
+                    width: 100%;
+                }
     
                 img {
                     width: 100%;
@@ -175,15 +288,31 @@
                 display: flex;
                 gap: 4.2rem;
                 align-items: center;
+
+                @include breakpoint($sm-bp) {
+                    flex-direction: column-reverse;
+                    gap: 2rem;
+                }
     
                 .main-aboutUs__img {
                     width: 55.8%;
+
+                    @include breakpoint($cos-bp) {
+                        width: 50%;
+                        height: 100%;
+                    }
+
+                    @include breakpoint($sm-bp) {
+                        width: 100%;
+                    }
     
                     img {
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
                     }
+
+
                 }
     
                 .main-aboutUs__upContainerTitle {
@@ -192,15 +321,39 @@
                     line-height: 130%;
                     text-align: center;
                     color: #090909;
+
+                    @include breakpoint($cos-bp) {
+                        width: 72%;
+                    }
+
+                    @include breakpoint($sm-bp) {
+                        width: 100%;
+                        font-size: 2.8rem;
+                        line-height: 130%;
+                    }
                 }
             }
     
             .main-aboutUs__downContainer {
                 display: flex;
                 gap: 4.2rem;
+
+                @include breakpoint($sm-bp) {
+                    flex-direction: column;
+                    gap: 2rem;
+                }
     
                 .main-aboutUs__imgContainer {
                     width: 65%;
+
+                    @include breakpoint($cos-bp) {
+                        width: 58%;
+                    }
+
+
+                    @include breakpoint($sm-bp) {
+                        width: 100%;
+                    }
 
                     img {
                         width: 100%;
@@ -218,6 +371,16 @@
                     flex-direction: column;
                     gap: 2rem;
                     width: 31.7%;
+
+                    @include breakpoint($cos-bp) {
+                        width: 44.7%;
+                    }
+
+                    @include breakpoint($sm-bp) {
+                        width: 100%;
+                        font-size: 1.8rem;
+                        line-height: 130%;
+                    }
                 }
             }
         }
@@ -228,6 +391,10 @@
     .main-aboutUs__listContainer {
         position: relative;
         margin-top: 9.8rem;
+
+        @include breakpoint($sm-bp) {
+            margin-top: 3rem;
+        }
 
         .main-aboutUs__imgContainer {
             // position: absolute;
@@ -252,6 +419,21 @@
             position: absolute;
             bottom: 4rem;
 
+            @include breakpoint($cos-bp) {
+                padding-left: 5rem;
+                padding-right: 5rem;
+            }
+
+            @include breakpoint($sm-bp) {
+                position: unset;
+                flex-direction: column;
+                padding: 0rem;
+                margin-top: 2rem;
+                gap: 1.5rem;
+            }
+
+
+
             li {
                 background: rgba(178, 40, 45, 0.8);
                 padding: 3rem;
@@ -259,6 +441,14 @@
                 display: flex;
                 flex-direction: column;
                 gap: 1.5rem;
+
+                @include breakpoint($xl-bp) {
+                    padding: 1.5rem;
+                }
+
+                @include breakpoint($sm-bp) {
+                    gap: 1rem;
+                }
                 
                 .main-aboutUs__listTitle {
                     font-family: 'Merriweather';
@@ -270,6 +460,12 @@
                     color: #FFFFFF;
                     padding-bottom: 1.5rem;
                     border-bottom: 0.1rem solid #FFFFFF;
+
+                    @include breakpoint($sm-bp) {
+                        font-size: 2rem;
+                        line-height: 130%;
+                        padding-bottom: 1rem;
+                    }
                 }
 
                 span {
@@ -278,6 +474,11 @@
                     line-height: 2rem;
                     color: #FFFFFF;
                     min-height: 7.9rem;
+
+                    @include breakpoint($sm-bp) {
+                        font-size: 1.4rem;
+                        line-height: 1.8rem;
+                    }
                 }
             }
         }
@@ -287,6 +488,10 @@
 
 .main-menu {
     margin-top: 16rem;
+
+    @include breakpoint($sm-bp) {
+        margin-top: 8rem;
+    }
 
     .main-menu__menuBlock {
         margin-top: 5rem;
@@ -414,8 +619,16 @@
         margin-top: 5rem;
         gap: 5rem;
 
+        @include breakpoint($xl-bp) {
+            flex-direction: column;
+        }
+
         .main-cook__leftContainer {
             width: 51%;
+
+            @include breakpoint($xl-bp) {
+                width: 100%;
+            }
             
             img {
                 width: 100%;
@@ -431,6 +644,10 @@
             gap: 2rem;
             justify-content: center;
             align-items: center;
+
+            @include breakpoint($xl-bp) {
+                width: 100%;
+            }
 
             p {
                 font-weight: 400;
