@@ -166,7 +166,7 @@
     left: 0;
     transform: translateX(-100%);
     transition: all 0.3s linear;
-
+    z-index: 10;
     @include breakpoint($sm-bp) {
         display: flex;
         flex-direction: column;

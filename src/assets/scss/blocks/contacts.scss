@@ -193,3 +193,12 @@
     height: 2rem;
   }
 }
+.facebook-icon,
+.instagram-icon,
+.whatsup-icon {
+  &:hover {
+    svg {
+      fill: #090909;
+    }
+  }
+}
