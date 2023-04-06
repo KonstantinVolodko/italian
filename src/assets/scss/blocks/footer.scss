@@ -1,11 +1,22 @@
 .footer {
     margin-top: 16rem;
+    margin-bottom: 8rem;
+
+    @include breakpoint($sm-bp) {
+        margin-top: 8rem;
+        margin-bottom: 7rem;
+    }
+
     ul {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
         padding-top: 5rem;
         border-top: 0.1rem solid #B2282D;
+
+        @include breakpoint($sm-bp) {
+            padding-top: 3rem;
+        }
 
 
         li {

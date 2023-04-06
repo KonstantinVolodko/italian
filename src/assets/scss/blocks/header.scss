@@ -33,6 +33,11 @@
         svg {
             width: 12.3rem;
             height: 13.4rem;
+
+            @include breakpoint($sm-bp) {
+                width: 7rem;
+                height: 7.6rem;
+            }
         }
     }
 
@@ -162,12 +167,23 @@
     transform: translateX(-100%);
     transition: all 0.3s linear;
 
+    @include breakpoint($sm-bp) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
     .header-modal__crossBtn {
         padding: 0rem;
         background: none;
         border: none;
         margin-top: 6.6rem;
         margin-left: 93%;
+
+        @include breakpoint($sm-bp) {
+            margin-top: 3.6rem;
+            margin-left: 88%;
+        }
 
         svg {
             width: 2.4rem;
@@ -183,6 +199,11 @@
         align-items: center;
         margin-top: 15rem;
         gap: 2rem;
+
+        @include breakpoint($sm-bp) {
+            margin-top: 0rem;
+            margin-bottom: 2rem;
+        }
 
         a {
             font-weight: 400;
@@ -228,6 +249,11 @@
         justify-content: center;
         align-items: center;
         margin-top: 3rem;
+
+        @include breakpoint($sm-bp) {
+            margin-top: 0rem;
+        }
+
         li {
 
             a {
