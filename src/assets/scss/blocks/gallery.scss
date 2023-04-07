@@ -17,6 +17,9 @@
   /* 2 */
   
   color: #090909;
+  @include breakpoint($xl-bp) {
+    font-size: 1.8rem;
+  }
 }
 
 .gallery-list {
