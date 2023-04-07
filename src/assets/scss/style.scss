@@ -81,6 +81,17 @@ svg {
   background: #B2282D !important;
 }
 
+.activeTab {
+  text-decoration-line: underline !important;
+  color: #B2282D !important;
+  opacity: 1 !important;
+}
+
+.resetTab {
+  padding: 0rem !important;
+  background: none !important;
+}
+
 .activeCutCornerFirst {
   border-radius: 2.4rem 2.4rem 0rem 2.4rem !important;
 }
@@ -88,6 +99,21 @@ svg {
 .activeCutCornerLast {
   border-radius: 2.4rem 2.4rem 2.4rem 0rem !important;
 }
+
+.showModal {
+  transform: translateX(0%) !important;
+  transition: all 0.3s linear !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+
 
 .stopScroll {
   overflow: hidden;

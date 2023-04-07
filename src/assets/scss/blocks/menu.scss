@@ -14,10 +14,24 @@
     .menu-content {
         margin-top: 5rem;
 
+        @include breakpoint($sm-bp) {
+            margin-top: 3rem;
+        }
+
         .menu-content__btnContainer {
             display: flex;
             gap: 6rem;
             justify-content: center;
+
+            @include breakpoint($sm-bp) {
+                gap: 3rem;
+                overflow: scroll;
+                justify-content: unset;
+
+                &::-webkit-scrollbar {
+                    width: 0;
+                }
+            }
         }
 
         button {
@@ -29,6 +43,13 @@
             border: none;
             padding: none;
             background: none;
+            padding: 0rem;
+
+            @include breakpoint($sm-bp) {
+                font-size: 2.4rem;
+                line-height: 3rem;
+                white-space: nowrap;
+            }
         }
 
         .menu-content__hiddenContainer {
@@ -40,6 +61,13 @@
         .menu-content__helperContainer {
             display: flex;
             gap: 3rem;
+            margin-top: 5rem;
+
+            @include breakpoint($xl-bp) {
+                flex-direction: column;
+                gap: 2rem;
+                margin-top: 2rem;
+            }
 
             
 
@@ -52,6 +80,75 @@
                 flex-direction: column;
                 gap: 1.5rem;
 
+                @include breakpoint($xl-bp) {
+                    padding: 2rem;
+                }
+
+                .main-content__vineContainer {
+                    display: flex;
+                    width: 100%;
+                    gap: 2rem;
+
+                    .main-content__itemName {
+                        // width: 60%;
+
+                        .main-content__itemNameVineSubtitle {
+                            font-size: 1.4rem;
+                            line-height: 1.8rem;
+                            text-align: right;
+                            color: #FFFFFF;
+
+                            @include breakpoint($xl-bp) {
+                                text-align: left;
+                            }
+
+                            @include breakpoint($sm-bp) {
+                                font-size: 1.2rem;
+                                line-height: 1.5rem;
+                            }
+                        }
+                    }
+
+                    .main-content__vineAdapt {
+                        display: flex;
+                        width: 35%;
+                        gap: 2rem;
+
+                        @include breakpoint($cos-bp) {
+                            width: 49%;
+                        }
+
+                        @include breakpoint($xl-bp) {
+                            flex-direction: column-reverse;
+                            text-align: end;
+                            gap: 0.5rem;
+                            justify-content: flex-end;
+                        }
+
+                        .main-content__itemPrice {
+                            width: 100%;
+                        }
+
+                        .main-content__vineItemSubtitle {
+                            width: 100%;
+                        }
+                    }
+
+                    .main-content__vineItemSubtitle {
+                        width: 20%;
+                        font-weight: 400;
+                        font-size: 1.4rem;
+                        line-height: 1.8rem;
+                        color: #FFFFFF;
+
+                        @include breakpoint($sm-bp) {
+                            font-size: 1.2rem;
+                            line-height: 1.5rem;
+                        }
+                    }
+                    
+                }
+
                 .main-content__headerContainer {
                     display: flex;
                     flex-direction: column;
@@ -59,6 +156,10 @@
                     padding-bottom: 2rem;
                     border-bottom: 0.1rem solid #FFFFFF;
                     width: 100%;
+
+                    @include breakpoint($xl-bp) {
+                        padding-bottom: 1.5rem;
+                    }
 
                     .main-content__title {
                         font-family: 'Merriweather';
@@ -69,6 +170,10 @@
                         text-align: center;
                         letter-spacing: 0.03em;
                         color: #FFFFFF;
+
+                        @include breakpoint($sm-bp) {
+                            font-size: 2rem;
+                        }
                     }
 
                     .main-content__subtitle {
@@ -80,6 +185,25 @@
                         text-align: center;
                         letter-spacing: 0.03em;
                         color: #FFFFFF;
+
+                        @include breakpoint($sm-bp) {
+                            font-size: 1.4rem;
+                        }
+                    }
+
+                    .main-content__vineSubtitle {
+                        font-family: 'Merriweather';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 1.6rem;
+                        line-height: 130%;
+                        text-align: center;
+                        letter-spacing: 0.03em;
+                        color: #FFFFFF;
+
+                        @include breakpoint($sm-bp) {
+                            font-size: 1.4rem;
+                        }
                     }
                 }
 
@@ -91,6 +215,15 @@
                         display: flex;
                         flex-direction: column;
                         gap: 0.8rem;
+                        width: 60%;
+
+                        @include breakpoint($cos-bp) {
+                            width: 45%;
+                        }
+
+                        @include breakpoint($sm-bp) {
+                            width: 80%;
+                        }
                         
 
                         .main-content__itemNameTitle {
@@ -98,6 +231,11 @@
                             font-size: 2rem;
                             line-height: 2.5rem;
                             color: #FFFFFF;
+
+                            @include breakpoint($sm-bp) {
+                                font-size: 1.8rem;
+                                line-height: 2.3rem;
+                            }
                         }
 
                         .main-content__itemNameSubtitle {
@@ -105,6 +243,11 @@
                             font-size: 1.4rem;
                             line-height: 1.8rem;
                             color: #FFFFFF;
+
+                            @include breakpoint($sm-bp) {
+                                font-size: 1.4rem;
+                                line-height: 1.8rem;
+                            }
                         }
                     }
 
@@ -113,12 +256,20 @@
                         font-size: 2rem;
                         line-height: 2.5rem;
                         color: #FFFFFF;
+                        width: 20%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+
+                        @include breakpoint($sm-bp) {
+                            font-size: 1.8rem;
+                            line-height: 2.3rem;
+                        }
 
                         .main-content__priceSibtitle {
                             font-size: 1.4rem;
                             line-height: 1.8rem;
                             display: flex;
-                            align-items: center;
                             text-align: right;
                             color: #FFFFFF;
                             flex-direction: column;
@@ -136,6 +287,16 @@
                 display: flex;
                 flex-direction: column;
                 gap: 3rem;
+                width: 32.15%;
+
+                @include breakpoint($cos-bp) {
+                    width: 31.7%;
+                }
+
+                @include breakpoint($xl-bp) {
+                    width: 100%;
+                    gap: 2rem;
+                }
             }
         }
     }

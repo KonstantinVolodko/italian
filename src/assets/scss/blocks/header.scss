@@ -58,11 +58,21 @@
             color: #FFFFFF;
             padding: 1.2rem 3.2rem;
             border: none;
+            border: 0.1rem solid #B2282D;
+            transition: all linear 0.3s;
 
             @include breakpoint($cos-bp) {
                 display: none;
             }
+
+            &:hover {
+                background: transparent;
+                color: #B2282D;
+                transition: all linear 0.3s;
+            }
         }
+
+
 
         .header-phoneLink {
             font-weight: 400;
@@ -166,6 +176,7 @@
     left: 0;
     transform: translateX(-100%);
     transition: all 0.3s linear;
+    z-index: 9;
 
     @include breakpoint($sm-bp) {
         display: flex;
@@ -188,6 +199,8 @@
         svg {
             width: 2.4rem;
             height: 2.4rem;
+            fill: #090909;
+            stroke: #090909;
         }
     }
 
