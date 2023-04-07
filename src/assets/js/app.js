@@ -68,24 +68,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     menu.forEach((e) => {
         e.addEventListener('click', el => {
-            // e.nextElementSibling.querySelectorAll('ul')
-            const array = ['элемент 1', 'элемент 2', 'элемент 3', 'элемент 4', 'элемент 5'];
-            const container1 = document.getElementById('container1');
-            const container2 = document.getElementById('container2');
-            const container3 = document.getElementById('container3');
-
+            let ulArray = e.nextElementSibling.querySelectorAll('ul')
             let i = 0;
             let containerIndex = 1;
+            
 
-            while (i < array.length) {
-                const element = document.createElement('div');
-                element.textContent = array[i];
+            while (i < ulArray.length) {
+                const element = document.createElement('ul');
+                element.innerHTML = ulArray[i].innerHTML;
+
+                
 
                 if (containerIndex === 1) {
                     menuLeftContainer.appendChild(element);
                 } else if (containerIndex === 2) {
                     menuCenterContainer.appendChild(element);
-                } else {
+                }else {
                     menuRightContainer.appendChild(element);
                 }
 
@@ -93,8 +91,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 i++;
             }
+
+            if (e.nextElementSibling.innerHTML === '') {
+                console.log('hellp')
+            }
         })
     })
+
+    menu[0].click()
 
 })
 
