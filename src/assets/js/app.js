@@ -69,41 +69,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     if (menuPage) {
-        
+
         if (window.matchMedia("(min-width: 1024px)").matches) {
             menu.forEach((e) => {
                 e.addEventListener('click', el => {
                     let ulArray = e.nextElementSibling.querySelectorAll('ul')
                     let i = 0;
                     let containerIndex = 1;
-        
+
                     menuLeftContainer.innerHTML = ""
                     menuCenterContainer.innerHTML = ""
                     menuRightContainer.innerHTML = ""
-                    
-        
+
+
                     menu.forEach(el => {
                         el.classList.remove('activeTab')
                     })
                     e.classList.add('activeTab')
-                    
-        
+
+
                     while (i < ulArray.length) {
                         const element = document.createElement('ul');
                         element.innerHTML = ulArray[i].innerHTML;
-        
-                        
-        
+
+
+
                         if (containerIndex === 1) {
                             menuLeftContainer.appendChild(element);
                         } else if (containerIndex === 2) {
                             menuCenterContainer.appendChild(element);
-                        }else {
+                        } else {
                             menuRightContainer.appendChild(element);
                         }
-        
+
                         containerIndex = (containerIndex % 3) + 1;
-        
+
                         i++;
                     }
 
@@ -112,10 +112,10 @@ document.addEventListener("DOMContentLoaded", () => {
                             e.classList.add('resetTab')
                         }
                     })
-                    
+
                 })
             })
-        }else if (window.matchMedia("(max-width: 1024px)").matches) {
+        } else if (window.matchMedia("(max-width: 1024px)").matches) {
             menu.forEach(e => {
                 e.addEventListener('click', el => {
                     menu.forEach(el => {
@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let thanksContainer = document.querySelector('.modal-thanksContainer')
     let sendBtn = document.querySelectorAll('.modal-sendBtn')
 
-    
+
     openModal.forEach(e => {
         e.addEventListener('click', el => {
             modal.classList.add('showModal')
@@ -153,38 +153,53 @@ document.addEventListener("DOMContentLoaded", () => {
         thanksContainer.classList.remove('show')
     })
 
-    sendBtn.forEach(e => {
-        e.addEventListener('click', el => {
-            formContainer.classList.add('hidden')
-            thanksContainer.classList.add('show')
-        })
-    })
-    
+    // sendBtn.forEach(e => {
+    //     e.addEventListener('click', el => {
+    //         formContainer.classList.add('hidden')
+    //         thanksContainer.classList.add('show')
+    //     })
+    // })
 
-        let header = document.querySelector('.header');
-        let scrollPosition = window.pageYOffset;
-    
-        function toggleHeader() {
+
+    let prevScrollPosition = window.pageYOffset;
+    let header = document.querySelector('.header');
+    let headerHeight = header.offsetHeight;
+
+
+    window.onscroll = function () {
         let currentScrollPosition = window.pageYOffset;
-        if (scrollPosition > currentScrollPosition) {
-            header.style.top = '0';
-            
+
+        if (prevScrollPosition > currentScrollPosition) {
+            header.style.top = "0";
         } else {
-            header.style.top = `-${header.offsetHeight + 'px'}`;
-            if (dropdownContent.classList.contains('increaceHeight')) {
+            header.style.top = `-${headerHeight + 'px'}`;
+            
+            if (window.matchMedia("(max-width: 1330px)").matches && dropdownContent.classList.contains('increaceHeight')) {
                 dropdownContent.classList.remove('increaceHeight')
             }
         }
-        scrollPosition = currentScrollPosition;
+
+        prevScrollPosition = currentScrollPosition;
+    }
+
+
+    const params = new URL(document.location).searchParams;
+    const category = params.get("category");
+
+    if (category) {
+        const button = document.querySelector([`data-item="${category}"`]);
+        if (button) {
+            button.click();
         }
-    
-        window.addEventListener('scroll', toggleHeader);
-        
-    
-        document.querySelector('.page').style.marginTop = `${header.offsetHeight + 'px'}`
+    } else {
+        if (menu.length) {
+            menu[0].click();
+        }
+    }
 
 
-    
+
+
 
 })
 
