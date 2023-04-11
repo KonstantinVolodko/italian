@@ -10850,16 +10850,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (category) {
         const buttonCategory = document.querySelector(`[data-item="${category}"]`);
+        console.log(buttonCategory)
         if (buttonCategory) {
             buttonCategory.click();
         }
     } else {
         if (menu.length) {
             menu[0].click();
-            
         }
     }
-
-
 
 })
