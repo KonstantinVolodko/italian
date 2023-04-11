@@ -622,7 +622,8 @@ svg {
     justify-content: space-between;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    position: fixed;
+    position: -webkit-sticky;
+    position: sticky;
     transition: all 0.2s linear;
     background: #FFFFFF;
     width: 100%;
