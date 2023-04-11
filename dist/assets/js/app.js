@@ -10700,10 +10700,11 @@ document.addEventListener("DOMContentLoaded", () => {
     let dropdownBtn = document.querySelector('.header-languageContainer svg')
     let dropdownContent = document.querySelector('.header-languageContainer ul')
 
-    dropdownBtn.addEventListener('click', e => {
-
-        dropdownContent.classList.toggle('increaceHeight')
-    })
+    if (dropdownBtn) {
+        dropdownBtn.addEventListener('click', e => {
+            dropdownContent.classList.toggle('increaceHeight')
+        })
+    }
 
     let headerModal = document.querySelector('.header-modal')
     let burgerBtn = document.querySelector('.header-burgerBtn')
@@ -10848,17 +10849,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const category = params.get("category");
 
     if (category) {
-        const button = document.querySelector([`data-item="${category}"`]);
-        if (button) {
-            button.click();
+        const buttonCategory = document.querySelector(`[data-item="${category}"]`);
+        if (buttonCategory) {
+            buttonCategory.click();
         }
     } else {
         if (menu.length) {
             menu[0].click();
+            
         }
     }
-
-
 
 
 
